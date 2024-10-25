@@ -1,8 +1,19 @@
 import React from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Hero from './components/Hero'
+import Brands from './components/Brands'
+import Features from './components/Features'
 
 function App() {
   return (
-    <div>App</div>
+    <>
+      <Header />
+      <Hero />
+      <Brands />
+      <Features />
+      <Footer />
+    </>
   )
 }
 
