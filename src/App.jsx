@@ -8,13 +8,13 @@ import './assets/css/main.css'
 
 function App() {
   return (
-    <>
+    <div className='wrapper'>
       <Header />
       <Hero />
       <Brands />
       <Features />
       <Footer />
-    </>
+    </div>
   )
 }
 
