@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Brands from './components/Brands'
 import Features from './components/Features'
+import './assets/css/main.css'
 
 function App() {
   return (
