@@ -10,9 +10,11 @@ function App() {
   return (
     <div className='wrapper'>
       <Header />
-      <Hero />
-      <Brands />
-      <Features />
+      <main>
+        <Hero />
+        <Brands />
+        <Features />
+      </main>
       <Footer />
     </div>
   )
