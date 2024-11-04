@@ -1079,6 +1079,7 @@ footer {
         .btn-primary {
             border: none;
             border-radius: 0 .5em .5em 0;
+            cursor: pointer;
         }
     }
     
