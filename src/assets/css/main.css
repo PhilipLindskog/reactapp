@@ -13,10 +13,64 @@
     --color-white: #fff;
     
     --color-primary: #6366F1;
+    --color-success: #22C55E;
+    --color-error: #EF4444;
+
+    
+
     
     --container-padding: 1rem;
     --transition-time: all 0.2s;
 }
+
+:root[data-theme=light] {
+    --color-bg: var(--color-white);
+    --color-bg-secondary: var(--color-gray-1);
+    --color-heading: var(--color-dark);
+    --color-text: var(--color-gray-6);
+    --color-text-2 : var(--color-gray-7);
+    --color-border: var(--color-gray-3);
+    --btn-store-bg: var(--color-dark);
+    --accordion-bg: var(--color-white);
+    --color-shadow: var(--color-gray-2);
+}
+
+:root[data-theme=dark] {
+    --color-bg: var(--color-dark);
+    --color-bg-secondary: #ffffff04;
+    --color-heading: var(--color-white);
+    --color-text: var(--color-gray-3);
+    --color-text-2 : var(--color-gray-3);
+    --color-border: rgba(255, 255, 255, .08);
+    --btn-store-bg: var(--color-gray-2);
+    --accordion-bg: #1A1E29;
+    --color-shadow: var(--color-dark);
+}
+
+:root[data-theme=dark] .content h2 {
+    opacity: 70%;
+}
+:root[data-theme=dark] p {
+    opacity: 70%;
+}
+
+:root[data-theme=dark]  {
+    .show-light {
+        display: none;
+    }
+} 
+:root[data-theme=dark] {
+    .show-dark{
+        display: block;
+    }
+} 
+.show-light {
+    display: block;
+}
+.show-dark {
+    display: none;
+}
+
 
 * {
     box-sizing: border-box;
@@ -34,7 +88,15 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
-    background-color: var(--color-white);
+    background-color: var(--color-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading);
+}
+
+p {
+    color: var(--color-text-2);
 }
 
 .wrapper {
@@ -64,6 +126,10 @@ ol, ul {
     list-style: none;
 }
 
+li {
+    color: var(--color-text-2);
+}
+
 
 
 .btn-primary {
@@ -87,8 +153,8 @@ ol, ul {
 }
 
 .btn-download-app {
-    background-color: var(--color-dark);
-    color: var(--color-white);
+    background-color: var(--btn-store-bg);
+    color: var(--color-heading);
     border-radius: 8px;
     padding: 12px 25px;
     display: flex;
@@ -110,9 +176,10 @@ ol, ul {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 1px solid var(--color-gray-3);
-    background-color: var(--color-white);
-    color: var(--color-dark);
+    border: 1px solid --color-border;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-heading);
+    cursor: pointer;
 }
 
 .btn-mobile {
@@ -130,6 +197,7 @@ ol, ul {
 .btn-toggle-switch .label {
     display: none;
     font-weight: 600;
+    color: var(--color-gray-7);
 }
 
 .toggle-switch {
@@ -191,7 +259,7 @@ ol, ul {
 }
 
 .nav-link{
-    color: var(--color-dark);
+    color: var(--color-heading);
     font-weight: 600;
     text-decoration: none;
 }
@@ -222,7 +290,7 @@ footer {
     font-size: .875rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    color: var(--color-gray-6);
+    color: var(--color-text);
 
     .container {
         display: flex;
@@ -250,7 +318,7 @@ footer {
 }
 
 .brand-box {
-    border: 1px solid var(--color-gray-3);
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     height: 100px;
     width: 200px;
@@ -387,7 +455,7 @@ footer {
         p {
             font-size: 1.125rem;
             font-weight: 400;
-            color: var(--color-gray-7);
+            color: var(--color-text-2);
             margin-bottom: 3rem;
         }
 
@@ -402,7 +470,7 @@ footer {
         }
 
         .discover-more {
-            color: var(--color-gray-7);
+            color: var(--color-text-2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -529,7 +597,7 @@ footer {
     .text {
         font-size: 1rem;
         font-weight: 400;
-        color: var(--color-gray-6);
+        color: var(--color-text);
         
     }
 
@@ -565,7 +633,7 @@ footer {
         h2 {
             font-size: 2.5rem;
             font-weight: 800;
-            color: var(--color-dark);
+            color: var(--color-heading);
 
             @media (min-width: 1400px) {
                 text-align: left;
@@ -577,14 +645,14 @@ footer {
         p {
             font-size: 1.125rem;
             font-weight: 400;
-            color: var(--color-gray-6);
+            color: var(--color-text);
         }
 
 
 }
 
 #how {
-    background-color: var(--color-gray-1);
+    background-color: var(--color-bg-secondary);
     padding-top: 2rem;
     padding-bottom: 4rem;
 
@@ -598,20 +666,20 @@ footer {
         h2 {
             font-size: 2.5rem;
             font-weight: 800;
-            color: var(--color-dark);
+            color: var(--color-heading);
         }
 
     }
     h3 {
         font-size: 1.75rem;
         font-weight: 800;
-        color: var(--color-dark);
+        color: var(--color-heading);
     }   
     
     p {
         font-size: 1rem;
         font-weight: 400;
-        color: var(--color-gray-7);
+        color: var(--color-text-2);
     }
 
     .text {
@@ -726,7 +794,7 @@ footer {
     }
 
     p {
-        color: var(--color-gray-7);
+        color: var(--color-text-2);
         padding-top: 1rem;
     }
 
@@ -760,7 +828,7 @@ footer {
 
 #testimonials {
     display: none;
-    background-color: var(--color-gray-1);
+    background-color: var(--color-bg-secondary);
     padding-top: 3rem;
     padding-bottom: 3rem;
     
@@ -802,14 +870,15 @@ footer {
         }
 
         p {
-            color: var(--color-gray-7);
+            color: var(--color-text-2);
             font-size: 1.125em;
         }
     }
 
 
     .card-faq {
-        border: 1px solid var(--color-gray-1);
+        border: 1px solid var(--color-border);
+        background-color: var(--accordion-bg);
         border-radius: 8px;
         display: flex;
         padding-inline: 1rem;
@@ -830,7 +899,8 @@ footer {
 
         .btn-faq{
           padding-inline: 1rem;
-          background-color: var(--color-gray-1);  
+          background-color: var(--color-bg-secondary);
+          border: var(--color-border);  
         }
 
         .btn-faq:hover {
@@ -844,6 +914,11 @@ footer {
         display: grid;
         grid-template-columns: 1fr auto;
         padding: 1rem;
+        
+        .btn-faq{
+            background-color: var(--color-primary);
+            rotate: 180deg;
+        }
     }
 
     .contact {
@@ -854,7 +929,7 @@ footer {
     }
     .contact-box {
         display: none;
-        border: 1px solid var(--color-gray-3);
+        border: 1px solid var(--color-border);
         border-radius: 8px;
         height: auto;
         width: auto;
@@ -887,7 +962,7 @@ footer {
         .card-faq {
             width: 90vw;
             margin: 1rem;
-            box-shadow: 0 4px 4px var(--color-gray-2) ;
+            box-shadow: 0 4px 4px var(--color-shadow) ;
         }
         
         .contact-box{
@@ -961,7 +1036,7 @@ footer {
     .container{
         display: flex;
         flex-direction: column;
-        background-color: var(--color-gray-1);
+        background-color: var(--color-bg-secondary);
         border: none;
         border-radius: 8px;
         width: 95vw;
@@ -980,6 +1055,7 @@ footer {
             width: 78px;
         }
         .headline {
+            color: var(--color-heading);
             font-size: 1.5rem;
             font-weight: 800;
         }

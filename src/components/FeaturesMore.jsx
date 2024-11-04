@@ -2,6 +2,8 @@ import React from 'react'
 import checkCircle from '../assets/images/check-circle.svg'
 import featuresMoreRight from '../assets/images/feature-more-right.svg'
 import featuresMoreLeft from '../assets/images/feature-more-left.svg'
+import paymentIcon from '../assets/images/payments-icon.svg'
+import cashbackIcon from '../assets/images/cashback-icon.svg'
 
 const FeaturesMore = () => {
   return (
@@ -33,11 +35,11 @@ const FeaturesMore = () => {
                 <h2>Receive payment from international bank details</h2>
                 <div className="flex-box">
                     <div className="text-box">
-                        <img src="/images/payments-icon.svg" alt=""/>
+                        <img src={paymentIcon} alt="" />
                         <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
                     </div>
                     <div className="text-box">
-                        <img src="/images/cashback-icon.svg" alt=""/>
+                        <img src={cashbackIcon} alt="" />
                         <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
                     </div>
                 </div>
