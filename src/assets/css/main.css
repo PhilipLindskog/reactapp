@@ -33,6 +33,7 @@
     --btn-store-bg: var(--color-dark);
     --accordion-bg: var(--color-white);
     --color-shadow: var(--color-gray-2);
+    --card-bg: var(--color-white);
 }
 
 :root[data-theme=dark] {
@@ -45,6 +46,7 @@
     --btn-store-bg: var(--color-gray-2);
     --accordion-bg: #1A1E29;
     --color-shadow: var(--color-dark);
+    --card-bg: rgba(255, 255, 255, .08);
 }
 
 :root[data-theme=dark] .content h2 {
@@ -842,6 +844,72 @@ footer {
         font-size: 2.5rem;
         font-weight: 800;
         padding: 2rem;
+    }
+
+    .review {
+       display: flex;
+       gap: 1rem; 
+    }
+
+    .card {
+        margin: .5rem;
+        padding: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 420px;
+        height: 330px;
+        background-color: var(--card-bg);
+        border-radius: .5rem;
+        box-shadow: 0 4px 4px var(--color-shadow);
+
+        .quote-icon{
+            display: flex;
+            height: 44px;
+            width: 44px;
+            background-color: var(--color-primary);
+            justify-content: center;
+            align-items: center;
+            border-radius: .5rem;
+            box-shadow: 0 4px 4px var(--color-shadow);
+            transform: translateY(-45px);
+            font-size: 1.5rem;
+            color: var(--color-white);
+        }
+
+        .stars {
+            margin-top: -3rem;
+            color: #FFBA08;
+
+            .fa-regular {
+                color: var(--color-gray-6);
+            }
+        }
+
+        p {
+           font-size: 1.1rem;
+        }
+
+        .author {
+            display: flex;
+            flex-direction: row;
+
+            .name-role {
+                /* flex-direction: column;
+                justify-content: space-around; */
+                margin-left: 1rem;
+
+                .name {
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+                .role {
+                    color: var(--color-gray-6);
+                    font-size: .9rem;
+                }
+            }
+        }
+
     }
 
     @media (min-width:1400px) {
