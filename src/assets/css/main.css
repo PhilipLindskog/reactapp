@@ -1157,6 +1157,11 @@ footer {
         border-radius: .5em;
     }
     
+    .email-form {
+        display: flex;
+        flex-direction: column;
+    }
+
     .input-group {
         display: flex;
     
@@ -1173,6 +1178,7 @@ footer {
     
     .input-group {
         position: relative;
+        
     }
     
     .icon {
@@ -1186,6 +1192,26 @@ footer {
     
     .email {
         padding-left: 2rem;
+    }
+
+    .error {
+        position: absolute;
+        color: var(--color-error);
+        font-size: .8rem;
+        transform: translateY(250%);
+    }
+
+    .info-box {
+        display: flex;
+        gap: 1rem;
+        max-width: 400px;
+        cursor: pointer;
+
+        .btn-primary {
+            height: 1rem;
+            margin-top: 1.5rem;
+            cursor: pointer;
+        }
     }
 
     @media (min-width:768px) {
