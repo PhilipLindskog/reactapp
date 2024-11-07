@@ -983,6 +983,7 @@ footer {
         display: grid;
         grid-template-rows: 0fr;
         overflow: hidden;
+        text-align: left;
         
 
         transition: grid-template-rows 300ms, padding-bottom 300ms;
