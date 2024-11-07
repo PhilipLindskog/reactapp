@@ -950,15 +950,9 @@ footer {
         border: 1px solid var(--color-border);
         background-color: var(--accordion-bg);
         border-radius: 8px;
-        margin: 5rem auto;
+        margin: auto;
         padding-inline: 1rem;
         
-        h4 {
-            text-align: left;
-            font-size: 1rem;
-            font-weight: 600;
-            
-        }  
     }
 
     .question {
@@ -967,6 +961,12 @@ footer {
         align-items: center;
         padding: .5rem;
         cursor: pointer;
+
+        h4 {
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 600;  
+        } 
     }
 
     .btn-faq{
@@ -983,6 +983,7 @@ footer {
         display: grid;
         grid-template-rows: 0fr;
         overflow: hidden;
+        
 
         transition: grid-template-rows 300ms, padding-bottom 300ms;
         padding: 0;
@@ -990,28 +991,20 @@ footer {
 
     .open .answer {
         padding-bottom: .7rem;
-        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        padding: 1rem;
+        
     }
 
     .open .btn-faq {
         background-color: var(--color-primary);
         rotate: 180deg;
+        color: var(--color-white);
     }
 
     .expandable {
         min-height: 0px;
     }
-    
-    /* .faq-open{
-        display: grid;
-        grid-template-columns: 1fr auto;
-        padding: 1rem;
-        
-        .btn-faq{
-            background-color: var(--color-primary);
-            rotate: 180deg;
-        }
-    } */
 
     .contact {
         display: flex;
