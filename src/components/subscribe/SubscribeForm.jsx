@@ -72,7 +72,7 @@ const SubscribeForm = () => {
                     type="email"
                     name='email'
                     value={formData.email}
-                    autocomplete="off"
+                    autoComplete="off"
                     placeholder="Your email"
                     onChange={handleChange}
                 />
