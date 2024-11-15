@@ -1,32 +1,28 @@
 import React from 'react'
 import './assets/css/main.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './views/Home'
+import Contact from './views/Contact'
+import FeaturesViews from './views/FeaturesViews'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Hero from './components/Hero'
-import Brands from './components/Brands'
-import Features from './components/Features'
-import How from './components/How'
-import FeaturesMore from './components/FeaturesMore'
-import Testimonials from './components/Testimonials'
-import Faq from './components/Faq'
-import Subscribe from './components/Subscribe'
+
 
 function App() {
   return (
-    <div className='wrapper'>
+    <BrowserRouter>
+      <div className='wrapper'>
       <Header />
-      <main>
-        <Hero />
-        <Brands />
-        <Features />
-        <How />
-        <FeaturesMore />
-        <Testimonials />
-        <Faq />
-        <Subscribe />
-      </main>
+        <main>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/features' element={<FeaturesViews />} />
+            <Route path='/contact' element={<Contact />} />
+          </Routes>
+        </main>
       <Footer />
-    </div>
+      </div>
+    </BrowserRouter>
   )
 }
 

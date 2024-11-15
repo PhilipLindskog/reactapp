@@ -267,6 +267,7 @@ li {
     color: var(--color-heading);
     font-weight: 600;
     text-decoration: none;
+    margin: 1rem;
 }
 .nav-link:hover {
     color: var(--color-primary);
@@ -394,6 +395,7 @@ footer {
         display: flex;
     }
 }
+
 
 
 
@@ -1239,5 +1241,13 @@ footer {
             content: " to stay informed about latest updates";
         }
         
+    }
+}
+
+.breadcrumb {
+    display: flex;
+
+    li {
+        margin-right: .5rem;
     }
 }
